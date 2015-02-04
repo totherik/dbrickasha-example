@@ -1,0 +1,21 @@
+{
+  "name": "dbrickashaw-example",
+  "version": "1.0.0",
+  "description": "An example of instrumenting a module with dbrickashaw",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm run compile",
+    "test": "npm run compile && 6to5-node test/harness.js test/**/*-test.js",
+    "start": "npm run compile && node server.js",
+    "compile": "6to5 --optional selfContained --modules common --out-dir dist index.js pretend-dependency/**.js",
+    "example": "6to5-node example/index.js"
+  },
+  "author": "Erik Toth <totherik@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "6to5": "^3.3.11",
+    "6to5-runtime": "^3.3.11",
+    "dbrickashaw": "^1.2.0"
+  },
+  "devDependencies": {}
+}
