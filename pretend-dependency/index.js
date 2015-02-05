@@ -1,12 +1,16 @@
 import Dbrickashaw from 'dbrickashaw';
 import { fibonacci, factorial } from './lib/common';
 
-const log = Dbrickashaw.createLogger();
-log.debug('', 'initializing');
 
-// Contrived example
+const logger = Dbrickashaw.createLogger();
+logger.debug(null, 'initializing');
+
 export default {
-    logger: Dbrickashaw.getRelay(),
+
+    publisher: Dbrickashaw.getPublisher(),
+
     fibonacci,
+
     factorial
+
 }
