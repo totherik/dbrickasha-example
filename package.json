@@ -15,7 +15,7 @@
   "dependencies": {
     "6to5": "^3.3.11",
     "6to5-runtime": "^3.3.11",
-    "dbrickashaw": "^1.2.0"
+    "dbrickashaw": "^3.0.0"
   },
   "devDependencies": {}
 }

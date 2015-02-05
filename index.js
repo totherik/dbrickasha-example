@@ -8,7 +8,7 @@ const log = Dbrickashaw.createLogger();
 export default {
 
     // Export our relay and combine it with the Pretend module's output.
-    logger: Dbrickashaw.getRelay().register(Pretend),
+    logger: Dbrickashaw.getRelay().observe(Pretend),
 
     getFibonacci (idx) {
         let result = Pretend.fibonacci(idx);
